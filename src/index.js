@@ -9,7 +9,13 @@ exports.min = function min(array) {
 };
 
 exports.max = function max(array) {
-    return 0;
+    if (array != null && array.length != 0) {
+        return array.reduce((firstValue, secondValue) => {
+            return Math.max(firstValue, secondValue);
+        });
+    } else {
+        return 0;
+    }
 };
 
 exports.avg = function avg(array) {
